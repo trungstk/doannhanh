@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_HomePage"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="Trang chủ"
+        app:cnb_iconColor="@color/white"
+        app:cnb_textColor="@color/white"
+        app:cnb_backgroundColor="@color/color_orange"
+        />
+    <item
+        android:id="@+id/menu_Notification"
+        android:enabled="true"
+        android:icon="@drawable/ic_notification"
+        android:title="Thông báo"
+        app:cnb_iconColor="@color/white"
+        app:cnb_textColor="@color/white"
+        app:cnb_backgroundColor="@color/color_orange"
+        />
+    <item
+        android:id="@+id/menu_Love"
+        android:enabled="true"
+        android:icon="@drawable/ic_love"
+        android:title="Yêu thích"
+        app:cnb_iconColor="@color/white"
+        app:cnb_textColor="@color/white"
+        app:cnb_backgroundColor="@color/color_orange"
+        />
+    <item
+        android:id="@+id/menu_Cart"
+        android:enabled="true"
+        android:icon="@drawable/ic_buy"
+        android:title="Giỏ hàng"
+        app:cnb_iconColor="@color/white"
+        app:cnb_textColor="@color/white"
+        app:cnb_backgroundColor="@color/color_orange"
+        />
+    <item
+        android:id="@+id/menu_Account"
+        android:enabled="true"
+        android:icon="@drawable/ic_profile"
+        android:title="Tài khoản"
+        app:cnb_iconColor="@color/white"
+        app:cnb_textColor="@color/white"
+        app:cnb_backgroundColor="@color/color_orange"
+        />
+</menu>

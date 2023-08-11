@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GUI.HomePage.CartFragment">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/SwipeRefreshLayoutCart"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_orange_nhat"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/baloo2_semibold"
+                        android:text="Giỏ hàng"
+                        android:textColor="@color/black"
+                        android:textSize="30dp" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_buy" />
+
+                    <TextView
+                        android:id="@+id/TextView_Amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/baloo2_semibold"
+                        android:text=""
+                        android:textColor="#FF5722"
+                        android:textSize="25sp" />
+                </LinearLayout>
+
+
+                <androidx.core.widget.NestedScrollView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/LinearLayout_BuyProduct"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:layout_gravity="center"
+                                    app:lottie_autoPlay="true"
+                                    app:lottie_loop="true"
+                                    app:lottie_rawRes="@raw/add_cart" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/baloo2_semibold"
+                                    android:gravity="center"
+                                    android:text="Giỏ hàng bạn hổng có sản phẩm nào, bạn quá đói!"
+                                    android:textColor="@color/black"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/baloo2_semibold"
+                                    android:gravity="center"
+                                    android:text="Hãy lướt SOL, lựa chọn món bạn thích nào :>"
+                                    android:textColor="@color/black"
+                                    android:textSize="18dp" />
+
+                                <android.widget.Button
+                                    android:id="@+id/Button_BuyProduct"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/btn1"
+                                    android:backgroundTint="@color/color_orange"
+                                    android:padding="10dp"
+                                    android:textSize="17dp"
+                                    android:text="Mua hàng ngay!"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/LinearLayout_Cart"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/RecyclerView_Cart"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="40dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/baloo2_semibold"
+                                        android:text="Tổng tiền :"
+                                        android:textColor="@color/black"
+                                        android:textSize="20dp" />
+
+                                    <TextView
+                                        android:id="@+id/TextView_TotalMoney"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/baloo2_semibold"
+                                        android:text="0"
+                                        android:textColor="#FF5722"
+                                        android:textSize="25dp" />
+                                </LinearLayout>
+
+                                <android.widget.Button
+                                    android:id="@+id/Button_Order"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="20dp"
+                                    android:background="@drawable/btn1"
+                                    android:fontFamily="@font/baloo2_semibold"
+                                    android:text="Đặt hàng"
+                                    android:backgroundTint="@color/color_orange"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="16dp" />
+
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/map_bogoc_duoi"
+                            android:fontFamily="@font/baloo2_semibold"
+                            android:gravity="center"
+                            android:text="Bạn có thể thích món ăn"
+                            android:textColor="@color/black"
+                            android:backgroundTint="@color/white"
+                            android:textSize="25sp" />
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/RecyclerView_ProductLike"
+                            android:background="@color/white"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</FrameLayout>
